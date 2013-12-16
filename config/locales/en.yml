@@ -1,0 +1,33 @@
+
+en:
+  chatwork_notifications: Chatwork Notifications
+  chatwork:
+    label_room: "Select room"
+    invalid_token: "Chatwork API token is invalid! please check {REDMINE_ROOT}/config/chatwork.yml"
+    settings: "Settings"
+    room: "Room"
+    issue: "Issue"
+    issue_notify_on_create: "notify when create a issue"
+    issue_notify_on_update: "notify when update a issue"
+    issue_description_max_lines: "max lines for description and notes"
+    issue_description_max_words: "max words for description and notes"
+    wiki: "Wiki"
+    wiki_notify_on_create: "notify when create a wiki"
+    wiki_notify_on_update: "notify when update a wiki"
+    wiki_created_notify_title: |-
+      Created a wiki page [%{title}] on %{project} by %{user}.
+      %{url}
+    wiki_created_notify_description: "Comment: %{comment}"
+    wiki_updated_notify_title: |-
+      Updated a wiki page [%{title}] on %{project} by %{user}.
+      %{url}
+    wiki_updated_notify_description: "Comment: %{comment}"
+    issue_created_notify_title: |-
+      Created a issue #%{id}: (%{title}) by %{user}.
+      %{url}
+    issue_created_notify_description: "%{comment}"
+    issue_updated_notify_title: |-
+      Updated a issue #%{id}: (%{title}) by %{user}.
+      %{url}
+    issue_updated_notify_description: "%{comment}"
+

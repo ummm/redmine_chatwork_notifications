@@ -1,0 +1,51 @@
+<%
+  client = ChatworkNotifications::Chatwork.new ChatworkNotifications::Helpers.options[:api_token]
+  rooms = client.rooms rescue {}
+%>
+
+<div class="chatwork_notifications">
+  <fieldset>
+    <legend><%= l("chatwork.settings") %></legend>
+    <p>
+    <label for="settings_room_id"><%= l("chatwork.room") %></label>
+    <% if rooms.blank? %>
+      <span style="color: red;font-weight: bold;"><%= l("chatwork.invalid_token") %></span>
+    <% else %>
+      <%= select_tag 'settings[room_id]', options_for_select({nil => l("chatwork.label_room")}.merge(rooms).invert, @settings['room_id']) %>
+    <% end %>
+    </p>
+  </fieldset>
+
+  <fieldset>
+    <legend><%= l("chatwork.issue") %></legend>
+    <p>
+    <label for="settings_issue_notify_on_create"><%= l("chatwork.issue_notify_on_create") %></label>
+    <%= check_box_tag 'settings[issue_notify_on_create]', true, @settings['issue_notify_on_create'] %>
+    </p>
+    <p>
+    <label for="settings_issue_notify_on_update"><%= l("chatwork.issue_notify_on_update") %></label>
+    <%= check_box_tag 'settings[issue_notify_on_update]', true, @settings['issue_notify_on_update'] %>
+    </p>
+    <p>
+    <label for="settings_issue_description_max_lines"><%= l("chatwork.issue_description_max_lines") %></label>
+    <%= number_field_tag 'settings[issue_description_max_lines]', @settings['issue_description_max_lines'] %>
+    </p>
+    <p>
+    <label for="settings_issue_description_max_words"><%= l("chatwork.issue_description_max_words") %></label>
+    <%= number_field_tag 'settings[issue_description_max_words]', @settings['issue_description_max_words'] %>
+    </p>
+  </fieldset>
+
+  <fieldset>
+    <legend><%= l("chatwork.wiki") %></legend>
+    <p>
+    <label for="settings_wiki_notify_on_create"><%= l("chatwork.wiki_notify_on_create") %></label>
+    <%= check_box_tag 'settings[wiki_notify_on_create]', true, @settings['wiki_notify_on_create'] %>
+    </p>
+    <p>
+    <label for="settings_wiki_notify_on_update"><%= l("chatwork.wiki_notify_on_update") %></label>
+    <%= check_box_tag 'settings[wiki_notify_on_update]', true, @settings['wiki_notify_on_update'] %>
+    </p>
+  </fieldset>
+</div>
+

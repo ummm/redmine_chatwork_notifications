@@ -1,0 +1,7 @@
+---
+production:
+  api_token: "TODO: please set chatowrk api token"
+
+development:
+  api_token: "TODO: please set chatowrk api token"
+

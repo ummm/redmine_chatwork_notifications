@@ -1,0 +1,33 @@
+
+ja:
+  chatwork_notifications: Chatwork Notifications
+  chatwork:
+    label_room: "チャットの選択"
+    invalid_token: "チャットワーク API トークンが正しくありません！ {REDMINE_ROOT}/config/chatwork.yml を確認して下さい"
+    settings: "設定"
+    room: "チャット"
+    issue: "チケット"
+    issue_notify_on_create: "チケットの作成時に通知する"
+    issue_notify_on_update: "チケットの更新時に通知する"
+    issue_description_max_lines: "注記・説明の最大表示行数"
+    issue_description_max_words: "注記・説明の最大表示文字数"
+    wiki: "Wiki ページ"
+    wiki_notify_on_create: "Wiki ページの作成時に通知する"
+    wiki_notify_on_update: "Wiki ページの更新時に通知する"
+    wiki_created_notify_title: |-
+      %{user} さんにより、 %{project} 上に Wiki ページ「%{title}」が作成されました
+      %{url}
+    wiki_created_notify_description: "コメント: %{comment}"
+    wiki_updated_notify_title: |-
+      %{user} さんにより、 %{project} 上の Wiki ページ「%{title}」が更新されました
+      %{url}
+    wiki_updated_notify_description: "コメント: %{comment}"
+    issue_created_notify_title: |-
+      %{user} さんにより、 チケット #%{id}: (%{title}) が作成されました
+      %{url}
+    issue_created_notify_description: "%{comment}"
+    issue_updated_notify_title: |-
+      %{user} さんにより、 チケット #%{id}: (%{title}) が更新されました
+      %{url}
+    issue_updated_notify_description: "%{comment}"
+
